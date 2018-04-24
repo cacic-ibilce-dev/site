@@ -1,0 +1,317 @@
+/* cores
+    verde: #01a755 == rgb(1,167,85);
+    preto: #000 == rgb(0,0,0);
+    branco: #fff == rgb(255,255,255);
+
+
+    https://material.io/guidelines/components/cards.html#cards-usage
+*/
+
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+@font-face {
+     font-family: Product Sans Regular;
+     src: url('../fonts/Product Sans Regular.ttf')format('truetype');
+}
+
+body{
+    font-family: 'Product Sans Regular';
+	/*background-color: rgba(0,0,0,.2);*/
+}
+::-moz-selection {
+  color: #fff;
+  background: rgba(1,167,85,.7);
+}
+
+::selection {
+  color: #fff;
+  background: rgba(1,167,85,.7);
+}
+
+header#box-topo {
+    background-color: rgba(0,0,0,.8);
+    /*background-color: rgba(0,0,0);*/
+    padding: 5px;
+}
+.navbar{
+    max-height: 70px;
+}
+/*Media query 400px navbar*/
+@media (max-width: 400px){
+    .navbar {
+        height: 100% !important;
+        max-height: 380px !important;
+    }
+}
+.navbar-green .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-green .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+a.nav-link {
+    color: #fff;
+    font-size: 18px;
+}
+.nav-link:hover {
+    color: #01a755;
+    transition: all 0.1s linear;
+    text-decoration: underline;
+}
+
+a#cacic-logo img{
+    padding: 0px;
+    /*width: auto;*/
+    /*height: 85px;*/
+    margin: 0px 0px 0px 10px;
+}
+
+ul#barra-menu li{
+    padding: 8px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+section.box-imagem {
+    /*background-image: url("../img/ibilce_frente_blur.jpg");*/
+    /*background-image: url("../img/cacic-ibilce-white.jpg");*/
+    /*background-image: url("../img/escrito.jpg");*/
+    background-image: url("../img/cacic_indio.png");
+    background-color: rgb(1,167,85);
+    height: 350px;
+    width: 100%;
+    background-position: center center;
+        -webkit-background-size: cover; 
+        -moz-background-size: cover; 
+    background-size: cover; 
+        -o-background-size: cover;
+}
+
+section.box-imagem h2{
+    padding-top: 5%;
+    font-size: 72px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+    padding-top: 100px;
+}
+section.box-imagem h3{
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+}
+
+img#logo-cacic-banner{
+    width: 25%;
+    height: 25%;
+    max-width: 27%;
+    max-height: 27%;
+    margin-left: 50px;
+}
+
+section#box-informativos{
+    margin-top: 20px;
+    /*background-color: rgba(0,0,0,.9);*/
+    /*color: #fff;*/
+}
+
+article.informativos-cacic{
+    padding: 20px;
+    box-shadow: 0px 0px 3px 0px #000;
+}
+
+article.informativos-cacic h4#titulo-informativo{
+    padding: 8px;
+}
+
+article.informativos-cacic footer.rodape-aviso a{
+    color: #01a755;
+}
+article.informativos-cacic footer.rodape-aviso,
+article.noticias-cacic footer.rodape-noticia a:hover {
+    color: #000;
+    transition: color 0.2s linear;
+}
+section#box-informativos article.noticias-cacic{
+    padding: 20px;
+}
+
+h4#titulo-noticia{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+section#box-informativos header i{
+    padding-top: 2px;
+}
+
+article.noticias-cacic header.titulo-noticia{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+article.noticias-cacic h6{
+    font-size: 15px;
+    color: rgba(0,0,0,.5);
+}
+article.noticias-cacic p, h6, footer.rodape-noticia{
+    margin-left: 15px;
+}
+
+footer.rodape-noticia a{
+    color: #01a755;
+}
+
+footer.rodape-site{
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+}
+
+footer.rodape-site h4{
+    margin-top: 20px;
+}
+
+footer.rodape-site ul{
+    list-style: none;
+}
+
+footer.rodape-site p{
+    text-align: center;
+}
+
+footer.rodape-site a {
+    color: #01a755;
+}
+
+footer.rodape-site a:hover {
+    color: #fff;
+    transition: color 0.2s linear;
+}
+article.agenda-cacic{
+    margin-top: 20px;
+}
+
+table.tabela-agenda tr.bg-verde{
+    color: #fff;
+    background-color: rgba(1,167,85,.7);
+}
+
+table.tabela-agenda tr.bg-vermelho{
+    color: #fff;
+    background-color: rgba(255,0,0,.7);
+}
+
+table.tabela-agenda tr.bg-laranja{
+    color: #fff;
+    background-color: rgba(255,165,0,.7);
+}
+
+table.tabela-agenda tr.bg-verde{
+    color: #fff;
+    background-color: rgba(1,167,85,.7);
+}
+
+table.tabela-agenda tr.bg-azul{
+    color: #fff;
+    background-color: rgba(0,0,255,.7);
+}
+
+table.tabela-agenda tr.bg-preto{
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+}
+table.tabela-agenda tr.bg-branco{
+    background-color: rgba(40,40,40,.5);
+    color: #fff;
+}
+
+table.tabela-agenda td.tabela-semana {
+    text-align: right;
+}
+
+table.tabela-agenda td.tabela-evento{
+    /*text-align: justify;*/
+}
+
+/* PRODUTOS.HTML */
+section#box-produtos{
+    /*background-color: rgba(0,0,0,.7);*/
+    margin-bottom: 50px;
+}
+section#box-produtos h4{
+    margin-top: 15px;
+}
+article.produto{
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+    border: 1px rgba(0,0,0,.3);
+    border-style: solid;
+    /*border-radius: 7px 7px;*/
+}
+article.produto img.img-fluid{
+    /*background-color: rgba(0,0,0,.2);*/
+    width: 100%;
+    height: 100%;
+}
+header.titulo-produto {
+    /*padding: 10px*/
+}
+footer.rodape-produto {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 45px;
+}
+header.titulo-produto h5{
+    padding: 5px;
+    position: absolute;
+    bottom: 120px;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #000;
+}
+footer.rodape-produto p{
+    color: #6f6f6f;
+    font-size: 0.95em;
+}
+.btn-cacic-verde {
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #01a755;
+}
+.btn-cacic-verde-inverted {
+    text-transform: uppercase; 
+    color: #000;
+    background-color:  #fff;
+}
+/* Contato */
+form#form-contato, article#texto-contato{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btn-cacic-verde-primary{
+    background-color: #01a755;
+    color: #fff;
+    border-color: #01a755;
+}
+
+.btn-cacic-verde-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-cacic-verde-primary:focus, .btn-cacic-verde-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/*Sobre*/
+section#historia-cacic, section#membros-cacic{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
