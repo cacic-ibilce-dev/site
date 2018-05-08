@@ -6,6 +6,3 @@ https://damyanon.net/post/flask-series-configuration/
 FlatPages (temporário, provavelmente sera subsitutido por mongoDB) ou n
 
 https://flask-flatpages.readthedocs.io/en/latest/
-
-
-me segue insta: @vitao
