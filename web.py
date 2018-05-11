@@ -41,19 +41,21 @@ def getCSS(arq):
 def getJS(arq):
 	print("------------------------------------------")
 	print(arq)
-	return send_from_directory(ROOT+"/site/static/js",arq)
+	return send_from_directory("static/js",arq)
 
 @app.route("/img/<arq>")
 def getIMG(arq):
 	print("------------------------------------------")
 	print(arq)
-	return send_from_directory(ROOT+"/site/static/img",arq, mimetype='image/gif')
+	return send_from_directory("static/img",arq, mimetype='image/gif')
 
 @app.route("/fonts/<arq>")
 def getFONTS(arq):
 	print("------------------------------------------")
 	print(arq)
-	return send_from_directory(ROOT+"/site/static/fonts",arq)
+	return send_from_directory("static/fonts",arq)
 
-if __name__ == "__main__":
-	app.run(host='0.0.0.0', debug=True)
+if __name__ == '__main__':
+   app.debug = True
+   port = int(os.environ.get("PORT", 5000))
+   app.run(host='0.0.0.0', port=port)
