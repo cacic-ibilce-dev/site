@@ -36,7 +36,7 @@ header#box-topo {
     max-height: 70px;
 }
 /*Media query 400px navbar*/
-@media (max-width: 400px){
+@media (max-width: 991px){
     .navbar {
         height: 100% !important;
         max-height: 380px !important;
