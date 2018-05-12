@@ -63,15 +63,15 @@ a.nav-link {
 
 a#cacic-logo img{
     padding: 0px;
-    /*width: auto;*/
-    /*height: 85px;*/
-    margin: 0px 0px 0px 10px;
+    width: auto;
+    height: 85px;
+    margin: 0px 20px 0px 0px;
 }
 
 ul#barra-menu li{
     padding: 8px;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 section.box-imagem {
@@ -107,8 +107,8 @@ section.box-imagem h3{
 img#logo-cacic-banner{
     width: 25%;
     height: 25%;
-    max-width: 27%;
-    max-height: 27%;
+    /*max-width: 27%;
+    max-height: 27%;*/
     margin-left: 50px;
 }
 
