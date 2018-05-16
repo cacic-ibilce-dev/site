@@ -32,7 +32,7 @@ def loja():
 	return render_template('loja.html')
 
 @app.route("/contato.html")
-def sobre():
+def contato():
 	return render_template('contato.html')
 
 #
