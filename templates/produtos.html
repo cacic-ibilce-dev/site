@@ -1,213 +1,141 @@
- <!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cacic</title>
-    
-    <!-- Bootstrap e estilo -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilo.css">
+{% extends "base.html" %}
 
-    <!-- icones material design da google -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+{%block title%}CACIC Loja{%endblock%}
 
-    <link rel="stylesheet" href="css/animate.css">
+{%block conteudo%}
 
-</head>
-<body>
-    <header id="box-topo">
-        <nav class="navbar navbar-expand-lg navbar-green">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a id="cacic-logo" class="navbar-brand" href="index.html">
-                <img id="logo-cacic-banner" src="img/cacic-logo-navbar.png">
-            </a>
-            <ul id="barra-menu" class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="produtos.html">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-               <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
-                </li>
-            </ul>
-        </div>
-        </nav>
-    </header>
-
-    <section id="box-produtos">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Produtos em destaque:</h4>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
+<section id="box-produtos">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Produtos em destaque:</h4>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
                             </article>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
-                            </article>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-12">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
-                            </article>
-                        </div>
-                        <div class="col-md-3 col-12 col-sm-6">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
-                            </article>
-                        </div>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3 col-12 col-sm-6">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
                             </article>
-                        </div>
-                        <div class="col-md-3 col-12 col-sm-6">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
                             </article>
-                        </div>
-                        <div class="col-md-3 col-12 col-sm-6">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-12 col-sm-6">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
                             </article>
-                        </div>
-                        <div class="col-md-3 col-12 col-sm-6">
-                            <article class="produto animated zoomIn">
-                                <article class="corpo-produto">
-                                    <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
-                                </article>
-                                <header class="titulo-produto">
-                                    <h5>Teste</h5>
-                                </header>
-                                <footer class="rodape-produto">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
-                                    <button type="button" class="btn btn-cacic-verde float-right">Link</button>
-                                </footer>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-12 col-sm-6">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
                             </article>
-                        </div>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-12 col-sm-6">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
+                            </article>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-12 col-sm-6">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
+                            </article>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-12 col-sm-6">
+                        <article class="produto animated zoomIn">
+                            <article class="corpo-produto">
+                                <img src="img/testeimg_fundo-335x250.jpg" alt="" class="img-fluid">
+                            </article>
+                            <header class="titulo-produto">
+                                <h5>Teste</h5>
+                            </header>
+                            <footer class="rodape-produto">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <!-- <button type="button" class="btn btn-cacic-verde-inverted float-right">More option</button> -->
+                                <button type="button" class="btn btn-cacic-verde float-right">Link</button>
+                            </footer>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="rodape-site">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 offset-md-1">
-                    <h4>Acesse também:</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-5 offset-md-1">
-                    <h4>As nossas redes sociais</h4>
-                    <ul class="redes-sociais">
-                        <li><a href="#" target="_blank" title="Curta a nossa página!">Página do Facebook</a></li>
-                        <li><a href="https://twitter.com/Cacic_ibilce" target="_blank" title="Siga-nos no Twitter!">Twitter</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12">
-                    <p>Todos os direitos reservados &copy;Cacic</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/jQuery.js"></script>
-    <script src="js/Poppers.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/bootstrap.js"></script>
-</body>
-</html>
+{%endblock%}

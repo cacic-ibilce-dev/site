@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <title>{%block titulo%}{%endblock%}</title>
+    
+    <!-- Bootstrap e estilo -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- icones material design da google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css">
+    <!--
+
+            fonte: Product San as 00:00s
+
+            https://material.io/icons/
+
+            AQUELE TUTORIAL QUE VAI SALVAR A MINHA VIDA 
+            https://www.youtube.com/watch?v=TCreNeL4L3E&list=PLylMDDjFIp1CYuoRH2wb97skbrnLWlRlZ&index=4
+
+
+            
+            https://groups.google.com/forum/#!forum/cacicibilce-dev
+
+
+            https://baconipsum.com/
+
+            Membros da gestão 2018
+
+
+            https://www.youtube.com/watch?v=n2H8wx1aBiQ
+    -->
+</head>
+<body>
+
+
+    <!-- 
+
+        Barra de navegação 
+
+    -->
+    <header id="box-topo">
+        <nav class="navbar navbar-expand-lg navbar-green">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a id="cacic-logo" class="navbar-brand" href="index.html">
+                <img id="logo-cacic-banner" src="img/cacic-logo-navbar.png">
+            </a>
+            <ul id="barra-menu" class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loja.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <!-- 
+
+
+        Banner
+
+
+    -->
+
+    <section class="box-imagem">
+        <h2  class="text-center">
+            Cacic
+        </h2>
+        <h3 class="text-center">Centro Acadêmico de Ciências da Computação</h3>
+    </section>
+
+
+    <!--
+        CONTEÚDO
+    -->
+
+    {%block conteudo%}{%endblock%}
+
+    <!--
+
+        RODAPÉ
+
+    -->
+
+
+    <footer class="rodape-site">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <h4>Acesse também:</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <h4>As nossas redes sociais</h4>
+                    <ul class="redes-sociais">
+                        <li><a href="#" target="_blank" title="Curta a nossa página!">Página do Facebook</a></li>
+                        <li><a href="https://twitter.com/Cacic_ibilce" target="_blank" title="Siga-nos no Twitter!">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <p>Todos os direitos reservados &copy;Cacic</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/Poppers.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script> 
+</body>
+</html>

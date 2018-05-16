@@ -1,163 +1,67 @@
- <!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cacic</title>
-    
-    <!-- Bootstrap e estilo -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilo.css">
+{% extends "base.html" %}
 
-    <!-- icones material design da google -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+{%block title%}CACIC Sobre{%endblock%}
 
-    <link rel="stylesheet" href="css/animate.css">
-    <!--
+{%block conteudo%}
 
-            fonte: Product San as 00:00s
-
-            https://material.io/icons/
-
-            AQUELE TUTORIAL QUE VAI SALVAR A MINHA VIDA 
-            https://www.youtube.com/watch?v=TCreNeL4L3E&list=PLylMDDjFIp1CYuoRH2wb97skbrnLWlRlZ&index=4
-
-
-            
-            https://groups.google.com/forum/#!forum/cacicibilce-dev
-
-
-            https://baconipsum.com/
-
-            Membros da gestão 2018
-
-
-            https://www.youtube.com/watch?v=n2H8wx1aBiQ
-    -->
-</head>
-<body>
-    <!-- Barra de navegação -->
-    <!-- Banner -->
-    <!--  -->
-    <header id="box-topo">
-        <nav class="navbar navbar-expand-lg navbar-green">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a id="cacic-logo" class="navbar-brand" href="index.html">
-                <img id="logo-cacic-banner" src="img/cacic-logo-navbar.png">
-            </a>
-            <ul id="barra-menu" class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="produtos.html">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-               <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
-                </li>
-            </ul>
-        </div>
-        </nav>
-    </header>
-
-    <section id="box-sobre">
-        <div class="container">
-            <div class="row">
-                <section class="col-md-8 animated fadeIn">
-                    <section id="historia-cacic">
-                        <header>
-                            <h4>Conheça um pouco da nossa história e quem nós somos</h4>
-                        </header>
-                        <article>
-                            <h5>O início:</h5>
-                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis deleniti quod nobis, laboriosam ipsum. Libero hic labore, cum, dolorum deserunt nihil. Excepturi illo, explicabo quod dolorum, doloremque adipisci dolorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum adipisci excepturi praesentium corrupti aliquid, fugiat velit, quos hic doloribus maxime voluptatum tempora repudiandae iusto nostrum commodi quas soluta sunt? Sint.</p>
-
-                            <figure>
-                                <img src="img/frente_ibilce.jpg" class="img-fluid" alt="" title="">
-                                <figcaption>Legenda imagem</figcaption>
-                            </figure>
-                            <h5>A diretoria 2k18:</h5>
-                            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis deleniti quod nobis, laboriosam ipsum. Libero hic labore, cum, dolorum deserunt nihil.</p>
-
-                            <figure>
-                                <img src="img/frente_ibilce.jpg" class="img-fluid" alt="" title="">
-                                <figcaption>Legenda imagem</figcaption>
-                            </figure>
-                        </article>
-                    </section>
-                </section>
-                <section class="col-md-4 animated bounceInRight" id="membros-cacic">
+<section id="box-sobre">
+    <div class="container">
+        <div class="row">
+            <section class="col-md-8 animated fadeIn">
+                <section id="historia-cacic">
                     <header>
-                        <h5>Membros Cacic:</h5>
+                        <h4>Conheça um pouco da nossa história e quem nós somos</h4>
                     </header>
-                    <table class="table table-hover tabela-membros-cacic">
-                        <thead>
-                            <tr>
-                                <th scope="col">Membro</th>
-                                <th scope="col">Cargo</th>
-                                <th scope="col">RA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Cleiton</th>
-                                <td scope="row">The President</td>
-                                <td scope="row">xxxxxx</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Jailson</th>
-                                <td scope="row">Sec dos banco</td>
-                                <td scope="row">xxxxxx</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Lion</th>
-                                <td scope="row">Sec das Armas</td>
-                                <td scope="row">xxxxxx</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <article>
+                        <h5>O início:</h5>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis deleniti quod nobis, laboriosam ipsum. Libero hic labore, cum, dolorum deserunt nihil. Excepturi illo, explicabo quod dolorum, doloremque adipisci dolorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum adipisci excepturi praesentium corrupti aliquid, fugiat velit, quos hic doloribus maxime voluptatum tempora repudiandae iusto nostrum commodi quas soluta sunt? Sint.</p>
+
+                        <figure>
+                            <img src="img/frente_ibilce.jpg" class="img-fluid" alt="" title="">
+                            <figcaption>Legenda imagem</figcaption>
+                        </figure>
+                        <h5>A diretoria 2k18:</h5>
+                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis deleniti quod nobis, laboriosam ipsum. Libero hic labore, cum, dolorum deserunt nihil.</p>
+
+                        <figure>
+                            <img src="img/frente_ibilce.jpg" class="img-fluid" alt="" title="">
+                            <figcaption>Legenda imagem</figcaption>
+                        </figure>
+                    </article>
                 </section>
-            </div>
+            </section>
+            <section class="col-md-4 animated bounceInRight" id="membros-cacic">
+                <header>
+                    <h5>Membros Cacic:</h5>
+                </header>
+                <table class="table table-hover tabela-membros-cacic">
+                    <thead>
+                        <tr>
+                            <th scope="col">Membro</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">RA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Cleiton</th>
+                            <td scope="row">The President</td>
+                            <td scope="row">xxxxxx</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jailson</th>
+                            <td scope="row">Sec dos banco</td>
+                            <td scope="row">xxxxxx</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Lion</th>
+                            <td scope="row">Sec das Armas</td>
+                            <td scope="row">xxxxxx</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
-    </section>
-
-    <footer class="rodape-site">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 offset-md-1">
-                    <h4>Acesse também:</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-5 offset-md-1">
-                    <h4>As nossas redes sociais</h4>
-                    <ul class="redes-sociais">
-                        <li><a href="#" target="_blank" title="Curta a nossa página!">Página do Facebook</a></li>
-                        <li><a href="https://twitter.com/Cacic_ibilce" target="_blank" title="Siga-nos no Twitter!">Twitter</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12">
-                    <p>Todos os direitos reservados &copy;Cacic</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/jQuery.js"></script>
-    <script src="js/Poppers.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/bootstrap.js"></script>
-</body>
-</html>
+    </div>
+</section>
+{%endblock%}
