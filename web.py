@@ -16,15 +16,24 @@ app.config.from_pyfile('config_flask.cfg')
 #
 
 @app.route("/")
+@app.route("/index.html")
 def home():
 	cacic_sobre =  flatpages.get_or_404("cacic_sobre")
 #	cacic_sobre = "dahora"
 	return render_template('index.html', cacic_sobre= cacic_sobre)
 
+
 @app.route("/sobre.html")
 def sobre():
 	return render_template('sobre.html')
 
+@app.route("/loja.html")
+def loja():
+	return render_template('loja.html')
+
+@app.route("/contato.html")
+def sobre():
+	return render_template('contato.html')
 
 #
 #	ARQUIVOS CSS IMAGENS ETC...
