@@ -10,6 +10,8 @@ ROOT = os.path.dirname(os.getcwd())
 app = Flask(__name__)
 flatpages = FlatPages(app)
 app.config.from_pyfile('config_flask.cfg')
+INDICES = '/templates/*.html' # Usado para a definição dos linkis
+
 
 #
 #	INDICES
@@ -41,28 +43,37 @@ def contato():
 
 @app.route("/css/<arq>")
 def getCSS(arq):
-	print("------------------------------------------")
-	print(arq)
-	print(ROOT+"/site/static/css/")
 	return send_from_directory("static/css/",arq, mimetype="text/css")
 
 @app.route("/js/<arq>")
 def getJS(arq):
-	print("------------------------------------------")
-	print(arq)
 	return send_from_directory("static/js/",arq)
 
 @app.route("/img/<arq>")
 def getIMG(arq):
-	print("------------------------------------------")
-	print(arq)
 	return send_from_directory("static/img/",arq, mimetype='image/gif')
 
 @app.route("/fonts/<arq>")
 def getFONTS(arq):
-	print("------------------------------------------")
-	print(arq)
 	return send_from_directory("static/fonts/",arq)
+
+#
+#	COISAS EXTRAS 
+#	DESENVOLVLIMENTO
+#
+
+'''
+Essa função é mais para ser usada no desenvolvimento
+
+Qualquer site que já não foi roteado acima será roteado abaixo. Facilitando
+o desenvolvimento (Especialmente para a galera do front)
+
+O ARQUIVO HTML TEM QUE ESTAR DENTRO DO DIRETORIO TEMPLATES
+'''
+@app.route('/<path:path>/')
+def catch_all(path):
+	print(path)
+	return render_template(path)
 
 if __name__ == '__main__':
    app.debug = True
