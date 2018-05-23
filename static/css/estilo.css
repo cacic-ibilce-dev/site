@@ -15,7 +15,7 @@
 
 body{
     font-family: 'Product Sans Regular';
-	/*background-color: rgba(0,0,0,.2);*/
+  /*background-color: rgba(0,0,0,.2);*/
 }
 ::-moz-selection {
   color: #fff;
@@ -34,12 +34,31 @@ header#box-topo {
 }
 .navbar{
     max-height: 70px;
+    justify-content: normal !important;
+}
+.cacic-logo-collapse{ 
+    display: none; 
 }
 /*Media query 400px navbar*/
 @media (max-width: 991px){
     .navbar {
         height: 100% !important;
         max-height: 380px !important;
+    }
+    .cacic-logo-collapse{
+        display: block;
+        margin-right: 25px !important;
+        margin-left: 25px !important;
+    }
+    .cacic-logo-hidden{
+        display: none;
+    }
+    section.box-imagem h2{
+    padding-top: 75px !important;
+    font-size: 60px !important;
+    }
+    section.box-imagem h3{
+        font-size: 30px !important;
     }
 }
 .navbar-green .navbar-toggler {
@@ -90,7 +109,7 @@ section.box-imagem {
 }
 
 section.box-imagem h2{
-    padding-top: 5%;
+    padding-top: 4%;
     font-size: 72px;
     text-transform: uppercase;
     font-weight: bold;
@@ -168,6 +187,7 @@ footer.rodape-noticia a{
 footer.rodape-site{
     background-color: rgba(0,0,0,.8);
     color: #fff;
+    margin-top: 75px;
 }
 
 footer.rodape-site h4{
