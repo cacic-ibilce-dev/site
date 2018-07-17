@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{%block title%}Form{%endblock%}
+
+
+{%block head%}
+
+	{{ pagedown.include_pagedown() }}
+
+{%endblock%}
+
+
+{%block conteudo%}
+
+    <form method="POST">
+        {{ form.pagedown(rows = 10) }}
+        {{ form.submit }}
+    </form>
+
+{%endblock%}
