@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory,send_file
+from flask import Flask, render_template, send_from_directory,send_file,request
 from flask_flatpages import FlatPages, pygments_style_defs
 import os
 
@@ -11,6 +11,7 @@ from flask_pagedown.fields import PageDownField
 from wtforms.fields import SubmitField
 
 class PageDownFormExample(Form):
+    title = PageDownField('Titulo')
     pagedown = PageDownField('Enter your markdown')
     submit = SubmitField('Submit')
 
@@ -60,8 +61,12 @@ def sobre():
 @app.route('/form.html', methods = ['GET', 'POST'])
 def index():
     form = PageDownFormExample()
-    if form.validate_on_submit():
+    if request.method =='POST':  # and form.validate()... form.validate() Always false
         text = form.pagedown.data
+        print(text)
+    else:
+    	print("VALIDATED MY ASS")
+    	
         # do something interesting with the Markdown text
     return render_template('form.html', form = form)
 
