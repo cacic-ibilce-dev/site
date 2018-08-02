@@ -1,7 +1,23 @@
-from flask import Flask, render_template, send_from_directory,send_file
+from flask import Flask, render_template, send_from_directory,send_file,request
 from flask_flatpages import FlatPages, pygments_style_defs
 import os
 
+
+#INICIO Para o PAGEDOWN MARKDOWN FORMS
+
+from flask_pagedown import PageDown
+from flask_wtf import Form
+from flask_pagedown.fields import PageDownField
+from wtforms.fields import SubmitField
+
+class PageDownFormExample(Form):
+    title = PageDownField('Titulo')
+    pagedown = PageDownField('Enter your markdown')
+    submit = SubmitField('Submit')
+
+
+
+#FIM  Para o PAGEDOWN MARKDOWN FORMS
 
 # Mais informações sobre FLASK:
 # http://flask.pocoo.org/docs/0.12/quickstart/
@@ -11,7 +27,19 @@ app = Flask(__name__)
 flatpages = FlatPages(app)
 app.config.from_pyfile('config_flask.cfg')
 INDICES = '/templates/*.html' # Usado para a definição dos linkis
+NOTICIAS = 'noticias'
 
+
+#INICIO Para funcionar o Pagedown
+
+app.config.update(dict(
+    SECRET_KEY="powerful secretkey",
+    WTF_CSRF_SECRET_KEY="a csrf secret key"
+))
+
+pagedown = PageDown(app)
+
+#FIM para funcionar o pagedown
 
 #
 #	INDICES
@@ -22,12 +50,26 @@ INDICES = '/templates/*.html' # Usado para a definição dos linkis
 def home():
 	cacic_sobre =  flatpages.get_or_404("cacic_sobre")
 #	cacic_sobre = "dahora"
-	return render_template('index.html', cacic_sobre= cacic_sobre)
+	noticias = [noticia for noticia in flatpages if noticia.path.startswith(NOTICIAS)]
+	return render_template('index.html', noticias= noticias)
 
 
 @app.route("/sobre.html")
 def sobre():
 	return render_template('sobre.html')
+
+@app.route('/form.html', methods = ['GET', 'POST'])
+def index():
+    form = PageDownFormExample()
+    if request.method =='POST':  # and form.validate()... form.validate() Always false
+        text = form.pagedown.data
+        print(text)
+    else:
+    	print("VALIDATED MY ASS")
+    	
+        # do something interesting with the Markdown text
+    return render_template('form.html', form = form)
+
 
 @app.route("/loja.html")
 def loja():

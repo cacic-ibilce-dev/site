@@ -3,6 +3,8 @@ click==6.7
 cycler==0.10.0
 Flask==1.0.2
 Flask-FlatPages==0.6
+Flask-PageDown==0.2.2
+Flask-WTF==0.14.2
 gunicorn==19.8.1
 itsdangerous==0.24
 Jinja2==2.10
@@ -16,10 +18,9 @@ pyparsing==2.2.0
 python-dateutil==2.7.2
 pytz==2018.4
 PyYAML==3.12
-scikit-learn==0.19.1
-scipy==1.1.0
 six==1.11.0
 virtualenv==15.2.0
 virtualenv-clone==0.3.0
 waitress==1.1.0
 Werkzeug==0.14.1
+WTForms==2.2.1
