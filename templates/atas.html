@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{%block title%}CACIC ATAS{%endblock%}
+
+
+{%block conteudo%}
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- ATAS BOX -->
+<section id="atas-cacic">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <article class="atas animated fadeIn">
+                    <h4>Atas reuniões do CACIC:</h4>
+                    <ul id="lista-atas" class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" target="_blank">Reunião - dd/mm/aaa</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="offset-md-1 col-md-6">
+                <article class="sobre-atas animated bounceInRight">
+                    <h4>O que são as ATAS?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quaerat expedita adipisci pariatur neque similique qui nisi doloribus quo. Nihil recusandae deleniti unde rem perspiciatis cumque, necessitatibus placeat nam molestias.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{%endblock%}
