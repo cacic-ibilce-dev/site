@@ -79,6 +79,7 @@ def loja():
 def contato():
 	return render_template('contato.html')
 
+
 #
 #	ARQUIVOS CSS IMAGENS ETC...
 #
@@ -110,10 +111,15 @@ Essa função é mais para ser usada no desenvolvimento
 Qualquer site que já não foi roteado acima será roteado abaixo. Facilitando
 o desenvolvimento (Especialmente para a galera do front)
 
-O ARQUIVO HTML TEM QUE ESTAR DENTRO DO DIRETORIO TEMPLATES
+O ARQUIVO HTML TEM QUE ES/eventos.html/eventos.htmlTAR DENTRO DO DIRETORIO TEMPLATES
 '''
-@app.route('/<path:path>/')
+@app.route('/<path>')
 def catch_all(path):
+	print(path)
+	print(path)
+	print(path)
+	print(path)
+	print(path)
 	print(path)
 	return render_template(path)
 
