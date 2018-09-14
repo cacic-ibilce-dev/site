@@ -84,6 +84,12 @@ def getIMG(arq):
 def getFONTS(arq):
 	return send_from_directory("static/fonts/",arq)
 
+# favicon é um icone 16x16 que fica no topo do browser
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 #
 #	COISAS EXTRAS 
 #	DESENVOLVLIMENTO
