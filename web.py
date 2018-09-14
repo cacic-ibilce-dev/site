@@ -20,14 +20,15 @@ INDICES = '/templates/*.html' # Usado para a definição dos linkis
 @app.route("/")
 @app.route("/index.html")
 def home():
-	cacic_sobre =  flatpages.get_or_404("cacic_sobre")
-#	cacic_sobre = "dahora"
-	return render_template('index.html', cacic_sobre= cacic_sobre)
+	return render_template('index.html')
 
 
 @app.route("/sobre.html")
 def sobre():
-	return render_template('sobre.html')
+	# Pega o arquivo que contém a descrição do CACIC
+	cacic_sobre =  flatpages.get_or_404("cacic_sobre")
+
+	return render_template('sobre.html',cacic_sobre=cacic_sobre)
 
 @app.route("/loja.html")
 def loja():
