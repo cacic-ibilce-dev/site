@@ -40,6 +40,17 @@ def contato():
 #
 #	ARQUIVOS CSS IMAGENS ETC...
 #
+@app.route("/atas.html")
+def atas():
+    return render_template('/atas.html')
+
+@app.route("/pautas.html")
+def pautas():
+    return render_template('pautas.html')
+
+@app.route("/eventos.html")
+def eventos():
+	return render_template('eventos.html')
 
 @app.route("/css/<arq>")
 def getCSS(arq):

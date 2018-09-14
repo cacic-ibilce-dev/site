@@ -42,7 +42,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -60,7 +60,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3260,7 +3260,7 @@ tbody.collapse.show {
   height: 0;
   margin: 0.5rem 0;
   overflow: hidden;
-  border-top: 1px solid #e9ecef;
+  /*border-top: 1px solid #e9ecef;*/
 }
 
 .dropdown-item {
@@ -3277,9 +3277,9 @@ tbody.collapse.show {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+/*  color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa;*/
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -3997,7 +3997,9 @@ tbody.collapse.show {
 }
 
 .navbar-nav .dropdown-menu {
-  position: static;
+  /*position: static;*/
+  position: -webkit-sticky;
+  position: sticky;
   float: none;
 }
 

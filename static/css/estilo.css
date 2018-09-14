@@ -14,8 +14,8 @@
 }
 
 body{
-    font-family: 'Product Sans Regular';
-  /*background-color: rgba(0,0,0,.2);*/
+    font-family: 'Product Sans Regular' !important;
+	/*background-color: rgba(0,0,0,.2);*/
 }
 ::-moz-selection {
   color: #fff;
@@ -32,35 +32,80 @@ header#box-topo {
     /*background-color: rgba(0,0,0);*/
     padding: 5px;
 }
+
+header#box-topo div.dropdown-menu{
+    background-color: rgb(51,51,51) !important;
+}
+
+header#box-topo div.dropdown-menu a{
+    color: #fff;
+}
+
+a.dropdown-item:hover, a.dropdown-item:focus {
+    color: #01a755 !important;
+    text-decoration: underline;
+    transition: all 0.1s linear;
+
+}
+.dropdown-divider-cacic {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,.6);
+}
+
 .navbar{
-    max-height: 70px;
-    justify-content: normal !important;
+    max-height: 60px;
 }
-.cacic-logo-collapse{ 
-    display: none; 
+
+a#cacic-logo-navbar-cut{
+    display: none;
 }
+
+a#cacic-logo-navbar-hide{
+    display: inline-block;
+    margin-right: 30px;
+}
+
 /*Media query 400px navbar*/
-@media (max-width: 991px){
+@media (max-width: 992px){
     .navbar {
-        height: 100% !important;
-        max-height: 380px !important;
+        height: auto;
+        max-height: 520px !important;
+        -webkit-max-height: 420px !important;
     }
-    .cacic-logo-collapse{
-        display: block;
-        margin-right: 25px !important;
-        margin-left: 25px !important;
+
+    a#cacic-logo-navbar-cut{
+        display: inline-block !important;
     }
-    .cacic-logo-hidden{
-        display: none;
+
+    a#cacic-logo-navbar-hide{
+        display: none !important;
     }
+
     section.box-imagem h2{
-    padding-top: 75px !important;
-    font-size: 60px !important;
+        font-size: 56px !important;
     }
+
     section.box-imagem h3{
-        font-size: 30px !important;
+        font-size: 32px !important;
+    }
+    
+    section#box-informativos h4#apresentacao-box{
+        font-size: 36px !important;
+    }
+
+    section#box-informativos header.titulo-noticia{
+        font-size: 24px;
+        margin-top: 55px;
+        margin-bottom: 10px;
+    }
+
+    section#box-informativos p{
+        font-size: 18px;
     }
 }
+
 .navbar-green .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.1);
@@ -74,23 +119,22 @@ a.nav-link {
     color: #fff;
     font-size: 18px;
 }
+
 .nav-link:hover {
     color: #01a755;
     transition: all 0.1s linear;
     text-decoration: underline;
 }
 
-a#cacic-logo img{
-    padding: 0px;
-    width: auto;
-    height: 85px;
-    margin: 0px 20px 0px 0px;
+a.cacic-logo img{
+    margin: 0px 0px 0px 10px;
+    margin-right: 150px;
 }
 
 ul#barra-menu li{
     padding: 8px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 section.box-imagem {
@@ -109,7 +153,7 @@ section.box-imagem {
 }
 
 section.box-imagem h2{
-    padding-top: 4%;
+    padding-top: 5%;
     font-size: 72px;
     text-transform: uppercase;
     font-weight: bold;
@@ -117,18 +161,16 @@ section.box-imagem h2{
     text-shadow: 1px 2px 1px #000;
     padding-top: 100px;
 }
+
 section.box-imagem h3{
     font-size: 36px;
     color: #fff;
     text-shadow: 1px 2px 1px #000;
 }
 
-img#logo-cacic-banner{
-    width: 25%;
-    height: 25%;
-    /*max-width: 27%;
-    max-height: 27%;*/
-    margin-left: 50px;
+img.logo-cacic-banner{
+    width: 100px;
+    height: auto;
 }
 
 section#box-informativos{
@@ -154,8 +196,16 @@ article.noticias-cacic footer.rodape-noticia a:hover {
     color: #000;
     transition: color 0.2s linear;
 }
+
 section#box-informativos article.noticias-cacic{
     padding: 20px;
+}
+
+/*Agenda google*/
+article.agenda-cacic iframe{
+    border-width:0;
+    width: 100%;
+    height: 500px;
 }
 
 h4#titulo-noticia{
@@ -184,10 +234,12 @@ footer.rodape-noticia a{
     color: #01a755;
 }
 
+/*RODAPE*/
+
 footer.rodape-site{
     background-color: rgba(0,0,0,.8);
     color: #fff;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 footer.rodape-site h4{
@@ -210,6 +262,8 @@ footer.rodape-site a:hover {
     color: #fff;
     transition: color 0.2s linear;
 }
+
+
 article.agenda-cacic{
     margin-top: 20px;
 }
@@ -261,9 +315,21 @@ section#box-produtos{
     /*background-color: rgba(0,0,0,.7);*/
     margin-bottom: 50px;
 }
-section#box-produtos h4{
-    margin-top: 15px;
+section#box-produtos p{
+    font-size: 1.2em;
+    padding-left: 30px;
 }
+
+section#box-produtos h4{
+    padding-left: 15px;
+    margin-top: 25px;
+    font-size: 2.0em;
+}
+
+section#box-produtos a{
+    color: #01a755;
+}
+
 article.produto{
     margin-top: 20px;
     box-shadow: 0px 0px 20px rgba(0,0,0,.3);
@@ -271,44 +337,61 @@ article.produto{
     border-style: solid;
     /*border-radius: 7px 7px;*/
 }
+
 article.produto img.img-fluid{
     /*background-color: rgba(0,0,0,.2);*/
     width: 100%;
     height: 100%;
 }
+
 header.titulo-produto {
     /*padding: 10px*/
 }
+
 footer.rodape-produto {
-    padding-top: 10px;
-    padding-left: 10px;
+    /*padding-top: 10px;*/
+    /*padding-left: 10px;*/
     padding-right: 10px;
     padding-bottom: 45px;
 }
+
 header.titulo-produto h5{
     padding: 5px;
-    position: absolute;
+    /*position: absolute;
     bottom: 120px;
-    color: #fff;
+    color: #fff;*/
+    color: #000;
     font-size: 2em;
-    font-weight: bold;
-    text-shadow: 0px 0px 10px #000;
+    /*font-weight: bold;*/
+    /*text-shadow: 0px 0px 10px #000;*/
 }
+
 footer.rodape-produto p{
     color: #6f6f6f;
     font-size: 0.95em;
 }
+
 .btn-cacic-verde {
     text-transform: uppercase;
     background-color: #fff;
     color: #01a755;
 }
+
 .btn-cacic-verde-inverted {
     text-transform: uppercase; 
     color: #000;
     background-color:  #fff;
 }
+
 /* Contato */
+section#box-contato h4{
+    font-size: 2em;
+}
+
+article#texto-contato h5{
+    font-size: 1.8em;
+}
+
 form#form-contato, article#texto-contato{
     margin-top: 25px;
     margin-bottom: 25px;
@@ -317,12 +400,11 @@ form#form-contato, article#texto-contato{
 .btn-cacic-verde-primary{
     background-color: #01a755;
     color: #fff;
-    border-color: #01a755;
+    border-color: #fff;
 }
 
 .btn-cacic-verde-primary:hover {
-  color: #fff;
-  background-color: #0069d9;
+  color: #000;
   border-color: #0062cc;
 }
 
@@ -334,4 +416,66 @@ form#form-contato, article#texto-contato{
 section#historia-cacic, section#membros-cacic{
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+section#historia-cacic h4{
+    font-size: 2em;
+}
+
+section#historia-cacic h5{
+    font-size: 1.6em;
+}
+
+article.gestao-cacic p{
+    padding-left: 10px;
+}
+
+.lista-comissao{
+    margin-bottom: 50px;
+}
+
+li.list-group-item.active{
+    background-color: rgba(1,167,85,0.8);
+    border-color: rgba(1,167,85,0.8);
+}
+
+/*ATAS*/
+section#atas-cacic{
+    margin-top: 50px;
+}
+
+section#atas-cacic article.atas h4, article.sobre-atas h4{
+    font-size: 2em;
+}
+
+section#atas-cacic article.atas a{
+    color: #000;
+    text-transform: uppercase;
+}
+
+section#atas-cacic article.atas a:hover{
+    color: #01a755;
+    transition: color 0.2s linear;
+}
+
+/*BOX-EVENTOS*/
+section#box-eventos h4{
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+article.evento {
+    margin-top: 30px;
+}
+
+article.evento p{
+    padding-left: 10px;
+}
+article.evento img.img-evento{
+    max-height: 350px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+}
+header.titulo-evento h5{
+    font-size: 25px;
+    font-weight: bold;
 }
