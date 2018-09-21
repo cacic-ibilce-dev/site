@@ -1,4 +1,5 @@
 from glob import glob
+from operator import itemgetter
 
 #Definindo as constantes
 
@@ -64,6 +65,9 @@ def Chapas():
 		# vamos ler os novo membros do arquivo
 		# Cada Arquivo é uma chapa
 		# Cada linha do arquivo é um membro
+
+		presidente = []
+		vice = []
 		for linha in arq:
 			novoMembro=[] #reseta o membro
 
@@ -77,13 +81,24 @@ def Chapas():
 			novoMembro.append(linha[6]) #Mensagem
 			novoMembro.append(linha[4]) #Foto
 
-			novosMembros.append(novoMembro)
-
-
+			#Separamos o vice e o presidente para colocar-los no começo da lista
+			if ("Vice Presidente" in linha[5]):
+				vice = novoMembro
+			elif ("Presidente" in linha[5]):
+				presidente = novoMembro
+			else:
+				novosMembros.append(novoMembro)
 
 		#deleta a primeira fileira, pois é apenas o cabeçalho do arquivo
 		# (tem o nome das perguntas do google forms)
 		novosMembros = novosMembros[1:]
+		
+		#Ordena os membros por nome (itemgetter é usado para ordernar uma lista de lista)
+		novosMembros.sort(key=itemgetter(0))
+
+		#Adiciona o vice e o presidente no começo da lista
+		novosMembros.insert(0,vice)
+		novosMembros.insert(0,presidente)
 		
 		#Adiciona os novosMembros a nova chapa
 		novaChapa.append(novosMembros)

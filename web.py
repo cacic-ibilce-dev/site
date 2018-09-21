@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_from_directory,send_file
 from flask_flatpages import FlatPages, pygments_style_defs
 import os
-from operator import itemgetter
+
 import cacic_code as cacic
 
 # Mais informações sobre FLASK:
@@ -19,7 +19,6 @@ app.config.from_pyfile('config_flask.cfg')
 #
 
 CHAPAS = cacic.Chapas()
-CHAPAS[0][1].sort(key=itemgetter(0))
 SOBRE = flatpages.get_or_404("cacic_sobre")
 
 

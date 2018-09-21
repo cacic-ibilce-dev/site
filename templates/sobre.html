@@ -22,11 +22,20 @@
 								</header>
 								<ul class="list-group lista-comissao">
 								{% for membro in chapa[1] %}
-										<li class="list-group-item">
-										<b>{{membro[0]}}</b>	<!--Nome -->
-										({{membro[1]}})			<!-- apelido-->
-										- {% if membro[2] %} {{membro[2]}} {% else %} Minion {% endif %} <!--Funão se tiver -->
-										</li>
+								
+
+									{% if "presidente" in membro[2] or "Presidente" in membro[2] %} 
+										<li class="list-group-item active">
+									{% else %}
+									 	<li class="list-group-item">
+									{% endif %}
+										
+									<b>{{membro[0]}}</b>	<!--Nome -->
+									({{membro[1]}})			<!-- apelido-->
+									- {% if membro[2] %} {{membro[2]}} {% else %} Minion {% endif %} <!--Funão se tiver -->
+									
+
+									</li>
 								{% endfor %}
 								</ul>
 							{%endfor%}
