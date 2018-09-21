@@ -43,7 +43,7 @@ def sobre():
 	# Pega o arquivo que contém a descrição do CACIC
 	
 
-	return render_template('sobre.html',cacic_sobre=SOBRE)
+	return render_template('sobre.html',cacic_sobre=SOBRE,chapas = CHAPAS)
 
 @app.route("/loja.html")
 def loja():
