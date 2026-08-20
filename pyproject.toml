@@ -1,0 +1,13 @@
+[project]
+name = "cacic.ibilce.unesp.br"
+version = "0.1.0"
+description = "projeto para site full-stack simples do centro acadêmico de ciência da computação -- CACiC"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.138.0",
+    "livereload>=2.7.1",
+]
+
+[tool.fastapi]
+entrypoint = "backend.main:app"
